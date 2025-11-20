@@ -4,14 +4,14 @@ using DomainModel;
 
 namespace Task_Dj
 {
-    public class DJRepository : IDJRepository
+    public class DJRepository : IDJService
     {
         private readonly HttpClient _httpClient;
         private readonly ILogger<DJRepository> _logger;
         private readonly IOptions<DJSettings> _settings;
-        private readonly InMemoryDJRepository _repository;
+        private readonly IDjInMemoryRepository _repository;
 
-    public DJRepository(HttpClient httpClient, ILogger<DJRepository> logger, IOptions<DJSettings> settings, InMemoryDJRepository repository)
+    public DJRepository(HttpClient httpClient, ILogger<DJRepository> logger, IOptions<DJSettings> settings, IDjInMemoryRepository repository)
     {
             _httpClient = httpClient;
             _logger = logger;

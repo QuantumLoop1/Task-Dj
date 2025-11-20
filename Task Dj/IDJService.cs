@@ -2,7 +2,7 @@
 
 namespace Task_Dj
 {
-    public interface IDJRepository
+    public interface IDJService
     {
         IEnumerable<DJ> GetAllDJs();
         DJ GetDJById(int id);

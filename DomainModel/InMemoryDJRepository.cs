@@ -4,7 +4,7 @@ using Task_Dj;
 
 namespace DomainModel
 {
-    public class InMemoryDJRepository
+    public class InMemoryDJRepository : IDjInMemoryRepository
     {
         private readonly List<DJ> _djs;
         private readonly List<Track> _tracks;
